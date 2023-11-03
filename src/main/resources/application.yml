@@ -5,9 +5,10 @@ spring:
   application:
     name: employee-service
   datasource:
-    url: jdbc:mysql://localhost:3306/EmployeeDB?useUnicode=yes&characterEncoding=UTF-8&useSSL=false&serverTimezone=UTC&useLegacyDatetimeCode=false
+    # url: jdbc:mysql://localhost:3306/EmployeeDB?useUnicode=yes&characterEncoding=UTF-8&useSSL=false&serverTimezone=UTC&useLegacyDatetimeCode=false
+    url: jdbc:mysql://monorail.proxy.rlwy.net:3306/railway?useUnicode=yes&characterEncoding=UTF-8&useSSL=false&serverTimezone=UTC&useLegacyDatetimeCode=false
     username: root
-    password: 1234
+    password: Cb4C-DDe4236-fH6H6a232HBGa-356F2
     driver-class-name: com.mysql.cj.jdbc.Driver # MySQL Driver Class
   jpa:
     hibernate:
@@ -17,7 +18,7 @@ spring:
       hibernate:
         dialect: org.hibernate.dialect.MySQLDialect # MySQL Dialect
         format_sql: true
-        default_schema: EmployeeDB
+        default_schema: railway
   config:
     import: "optional:configserver:http://localhost:9002"
   cloud:
